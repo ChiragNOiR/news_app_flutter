@@ -1,4 +1,6 @@
-class ArticleModel {
+import 'package:flutter/material.dart';
+
+class ArticleModel with ChangeNotifier {
   String? title;
   String? description;
   String urlToImage;

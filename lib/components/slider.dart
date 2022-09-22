@@ -30,6 +30,7 @@ class _NewsSliderState extends State<NewsSlider> {
           child: SizedBox(
             height: 280,
             child: ListView.builder(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               itemBuilder: (context, index) {
                 ArticleModel article = listOfNews[index];
                 return GestureDetector(
@@ -39,7 +40,7 @@ class _NewsSliderState extends State<NewsSlider> {
                         builder: (context) => BreakingNewsCard(article)),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(2),
                     child: BreakingNewsCard(article),
                   ),
                 );

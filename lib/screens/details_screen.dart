@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_tut/models/api_model/article_model.dart';
+import 'package:news_app_tut/screens/web_view_screen.dart';
 import 'package:news_app_tut/styles/app_styles.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -59,10 +60,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => WebView(
-                                initialUrl: widget.data.url,
-                                javascriptMode: JavascriptMode.unrestricted,
-                              )),
+                        builder: (context) => WebViewDetails(
+                          data: widget.data,
+                        ),
+                      ),
                     );
                   },
                   minWidth: double.infinity,
